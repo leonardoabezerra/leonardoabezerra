@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Lato:wght@400;700&display=swap');
+
+/*
+:root {
+    --primary-color: #0077b6;
+    --secondary-color: #00b4d8;
+    --bg-color: #f8f9fa;
+    --container-color: #ffffff;
+    --text-color: #343a40;
+    --light-text-color: #f8f9fa;
+    --shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+    --title-font: 'Raleway', sans-serif;
+    --body-font: 'Lato', sans-serif;
+}*/
+
+:root {
+    /* -- COLORS -- */
+    --background-color: #14191f;
+    --border-color: #2b3540;
+    --container-color: #14191f;
+    --skill-tag-color: #2b3540;
+
+    --primary-text-color: #ffffff;
+    --secondary-text-color: #9dadbe;
+  
+    /* -- FONTS -- */
+    --primary-font: 'Inter', 'Raleway', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--primary-font);
+    background-color: var(--background-color);
+    color: var(--primary-text-color);
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+h2 {
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: -0.015em;
+    padding-bottom: 1rem;
+}
+
+h3 {
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: -0.015em;
+    padding-bottom: 0.5rem;
+}
+
+a {
+    color: var(--primary-text-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--secondary-text-color);
+}
+
+section {
+      padding: 2rem 1.5rem;
+}
+
+.portfolio-container {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.main-content {
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto; 
+    padding: 1.25rem 0;
+}
+
+
+/* ----- HEADER ----- */
+.site-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.75rem 2.5rem;
+    border-bottom: 1px solid var(--border-color);
+    width: 100%;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.logo-icon {
+    width: 1rem;
+    height: 1rem;
+}
+
+.logo-title {
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: -0.015em;
+}
+
+.main-nav ul {
+    display: flex;
+    align-items: center;
+    gap: 2.25rem;
+    list-style: none;
+}
+
+.main-nav a {
+    font-size: 14px;
+    font-weight: 500;
+}
+/* ----- END HEADER ----- */
+
+/* ----- PROFILE SECTION ----- */
+.profile-picture-header {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--border-color); 
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOfbX2kb9ObVWA6GGD8N3tbTk4LK1Q3PsAcQ&s'); 
+    background-size: cover;
+    background-position: center;
+}
+
+.profile-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    text-align: center;
+}
+
+.profile-picture-main {
+    width: 128px;
+    height: 128px;
+    border-radius: 50%;
+    background-color: var(--border-color);
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOfbX2kb9ObVWA6GGD8N3tbTk4LK1Q3PsAcQ&s');
+    background-size: cover;
+    background-position: center;
+}
+
+
+.profile-name {
+    font-family: var(--title-font);
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: -0.015em;
+}
+
+.profile-graduation,
+.profile-university {
+    color: var(--secondary-text-color);
+}
+/* ----- END PROFILE SECTION ----- /*
+
+/* ----- BIOGRAPHY SECTION ----- */
+.biography-section p,
+#competencies p {
+    color: var(--primary-text-color);
+}
+/* ----- END BIOGRAPHY SECTION */
+
