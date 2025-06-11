@@ -201,9 +201,53 @@ section {
     font-weight: 500;
     
 }
-
-
-
-
 /* ----- END SKILLS SECTION ----- */
 
+
+/* ----- PROJECTS SECTION ----- */
+#projects article {
+    margin-bottom: 2rem;
+}
+
+.project-card {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.project-info {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: baseline;
+}
+
+.project-title {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.project-description {
+    font-size: 14px;
+    color: var(--secondary-text-color);
+}
+
+.project-image {
+    flex: 1;
+    aspect-ratio: 16 / 9;
+    border-radius: 12px;
+    background-color: var(--border-color);
+    background-size: cover;
+    background-position: center;
+}
+
+/* -- Project images -- */
+#projects article:nth-of-type(1) .project-image {
+    background-image: url('https://i.pcmag.com/imagery/reviews/04qHO614ypU9ShCtnbBTpah-1..v1647977891.png');
+}
+#projects article:nth-of-type(2) .project-image {
+    background-image: url('https://i.ytimg.com/vi/PUnA5tk0Ilw/maxresdefault.jpg')
+}
+
+/* ----- END PROJECTS SECTION ----- */
