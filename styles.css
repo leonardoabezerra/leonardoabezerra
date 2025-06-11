@@ -251,3 +251,31 @@ section {
 }
 
 /* ----- END PROJECTS SECTION ----- */
+
+
+/* ----- EXPERIENCES SECTION ----- */
+#experiences article {
+    margin-bottom: 2rem;
+}
+
+.experience-card {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.experience-info {
+    align-items: baseline;
+}
+
+.experience-title {
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.experience-description, .experience-date {
+    font-size: 14px;
+    color: var(--secondary-text-color);
+
+}
