@@ -37,8 +37,9 @@ h2 {
 
 h3 {
     font-size: 18px;
-    font-weight: 600;
+    font-weight: 500;
     letter-spacing: -0.015em;
+    padding-top: 0.5rem;
     padding-bottom: 0.5rem;
 }
 
@@ -111,19 +112,21 @@ section {
     display: flex;
     align-items: center;
     padding-bottom: 0.25rem;
-    gap: 2.25rem;
+    gap: 1.5rem;
 }
 
 .main-nav ul {
     display: flex;
     align-items: center;
-    gap: 2.25rem;
+    gap: 1.5rem;
     list-style: none;
 }
 
 .main-nav a {
     font-size: 14px;
     font-weight: 500;
+    display: block;
+    padding: 0.5rem 0.55rem;
 }
 
 .profile-picture-header {
@@ -144,8 +147,9 @@ section {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 1rem;
     text-align: center;
+    padding-bottom: 0.5rem;
+    gap: 1rem;
 }
 
 .profile-picture-main {
@@ -176,6 +180,8 @@ section {
 /* ----- BIOGRAPHY SECTION ----- */
 .biography-section p,
 #competencies p {
+    font-size: 14px;
+    font-weight: 300;
     color: var(--primary-text-color);
 }
 /* ----- END BIOGRAPHY SECTION */
@@ -198,8 +204,7 @@ section {
     height: 32px;
     border-radius: 999px;
     font-size: 14px;
-    font-weight: 500;
-    
+    font-weight: 400;
 }
 /* ----- END SKILLS SECTION ----- */
 
