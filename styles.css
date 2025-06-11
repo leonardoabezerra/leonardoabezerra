@@ -135,7 +135,7 @@ section {
     border-radius: 50%;
     align-items: center;
     background-color: var(--border-color); 
-    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOfbX2kb9ObVWA6GGD8N3tbTk4LK1Q3PsAcQ&s'); 
+    background-image: url('assets/pfp.jpg'); 
     background-size: cover;
     background-position: center;
 }
@@ -157,7 +157,7 @@ section {
     height: 128px;
     border-radius: 50%;
     background-color: var(--border-color);
-    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOfbX2kb9ObVWA6GGD8N3tbTk4LK1Q3PsAcQ&s');
+    background-image: url('assets/pfp.jpg');
     background-size: cover;
     background-position: center;
 }
