@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Lato:wght@400;700&display=swap');
 
 :root {
-    /* -- COLORS -- */
+    /* -- colors -- */
     --background-color: #14191f;
     --border-color: #2b3540;
     --container-color: #14191f;
@@ -10,14 +10,20 @@
     --primary-text-color: #ffffff;
     --secondary-text-color: #9dadbe;
   
-    /* -- FONTS -- */
+    /* -- fonts -- */
     --primary-font: 'Inter', 'Raleway', sans-serif;
 }
+
+/* ----- GENERAL ----- */
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
@@ -57,7 +63,7 @@ section {
       padding: 1rem 1.5rem;
 }
 
-.portfolio-container {
+.cv-container {
     width: 100%;
     min-height: 100vh;
     display: flex;
@@ -70,6 +76,14 @@ section {
     margin: 0 auto; 
     padding: 1.25rem 0;
 }
+
+
+/* -- scrollbar -- */
+::-webkit-scrollbar {
+    display: none;
+}
+
+/* ----- END GENERAL ----- */
 
 
 /* ----- HEADER ----- */
