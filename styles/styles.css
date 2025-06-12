@@ -149,7 +149,7 @@ section {
     border-radius: 50%;
     align-items: center;
     background-color: var(--border-color); 
-    background-image: url('assets/pfp.jpg'); 
+    background-image: url('../assets/pfp.jpg'); 
     background-size: cover;
     background-position: center;
 }
@@ -179,7 +179,7 @@ section {
     height: 128px;
     border-radius: 50%;
     background-color: var(--border-color);
-    background-image: url('assets/pfp.jpg');
+    background-image: url('../assets/pfp.jpg');
     background-size: cover;
     background-position: center;
 }
