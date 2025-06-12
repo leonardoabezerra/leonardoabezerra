@@ -323,4 +323,9 @@ section {
     width: 24px;
     fill: var(--secondary-text-color);
 }
+
+.network-icons svg:hover{
+    fill: var(--border-color);
+}
+
 /* ----- END FOOTER ----- */
