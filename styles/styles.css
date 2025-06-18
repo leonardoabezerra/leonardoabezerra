@@ -143,6 +143,67 @@ section {
     padding: 0.5rem 0.55rem;
 }
 
+/* -- Dropdown Menu -- */
+.main-nav li.has-dropdown {
+    position: relative;
+}
+
+.has-dropdown > a::after {
+    content: ' »';
+    display: inline-block;
+    margin-left: 5px;
+}
+
+.has-dropdown ul.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: auto;
+    background-color: var(--background-color);
+    list-style: none;
+    padding: 0.5rem 0;
+    margin: 0;
+    min-width: 200px;
+    border-radius: 8px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
+    z-index: 1001;
+}
+
+.dropdown-menu li {
+    width: 100%;
+    border-bottom:1px solid var(--border-color);
+    border-top: 1px solid var(--border-color);
+
+}
+
+.dropdown-menu li a {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+
+    padding: 0.75rem 1.5rem;
+    color: var(--primary-text-color);
+    font-size: 14px;
+    white-space: nowrap;
+    text-align: left;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.dropdown-menu svg {    
+    
+    fill: var(--secondary-text-color);
+}
+
+.dropdown-menu li a:hover {
+    background-color: var(--border-color, #0077b6);
+    color: var(--secondary-text-color);
+}
+
+.has-dropdown:hover > .dropdown-menu {
+    display: block;
+}
+
+/* -- Profile Picture -- */
 .profile-picture-header {
     width: 40px;
     height: 40px;
