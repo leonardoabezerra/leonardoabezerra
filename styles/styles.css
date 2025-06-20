@@ -18,20 +18,19 @@
 /* ----- ANIMATIONS ----- */
 @keyframes skill-tag-shake {
     0%, 100% {
-        transform: translateX(0);
-        transform: translateY(-6px);
+        transform: translateX(0) translateY(-6px);
     }
-    15%, 45%, 75% {
-        transform: translateX(-5px);
+    15%, 45% {
+        transform: translateX(-4px);
     }
-    30%, 60%, 90% {
-        transform: translateX(5px);
+    60%, 90% {
+        transform: translateX(4px);
     }
     30% {
-        transform: translateY(-7px);
+        transform: translateX(4px) translateY(-7px);
     }
     75% {
-        transform: translateY(-5px);
+        transform: translateX(-4px) translateY(-5px);
     }
 }
 
@@ -389,31 +388,58 @@ section {
 
 
 /* ----- EXPERIENCES SECTION ----- */
-#experiences article {
-    margin-bottom: 2rem;
+.timeline {
+    position: relative;
+    border-left: 2px solid var(--border-color);
+    list-style: none;
 }
 
-.experience-card {
-    display: flex;
-    align-items: stretch;
-    justify-content: space-between;
-    gap: 1rem;
+.timeline-item {
+    position: relative;
+    margin-bottom: 2.5rem;
+    margin-left: 1rem;
 }
 
-.experience-info {
-    align-items: baseline;
+.timeline-item:last-child {
+    margin-bottom: 0;
 }
 
-.experience-title {
-    font-size: 16px;
+/* -- Timeline dot -- */
+.timeline-dot {
+    position: absolute;
+    left: -1.5rem;
+    top: 0.23rem;
+    width: 0.95rem;
+    height: 0.95rem;;
+    background-color: var(--border-color);
+    border: 2px solid var(--background-color);
+    border-radius: 50%;
+}
+
+/* -- Timeline content -- */
+.timeline-date {
+    display: block;
+    margin-bottom: 0.1rem;
+    font-size: 0.875rem;
     font-weight: 400;
-}
-
-.experience-description, .experience-date {
-    font-size: 14px;
+    line-height: 1.25rem;
     color: var(--secondary-text-color);
-
 }
+
+.timeline-title {
+    font-weight: 500;
+    color: var(--primary-text-color);
+    margin-bottom: 0.1rem;
+}
+
+.timeline-description {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--secondary-text-color);
+}
+
+
 /* ----- END EXPERIENCES SECTION ----- */
 
 
