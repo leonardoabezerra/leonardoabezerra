@@ -186,7 +186,7 @@ section {
     font-size: 14px;
     white-space: nowrap;
     text-align: left;
-    transition: background-color 0.2s ease, color 0.2s ease;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .dropdown-menu svg {    
@@ -301,7 +301,17 @@ section {
     display: flex;
     align-items: stretch;
     justify-content: space-between;
+    padding-left: 0.25rem;
+    border-radius: 10px;
     gap: 1rem;
+    transition: transform 0.2s ease-in-out;
+}
+
+.project-card:hover {
+    background-color: var(--border-color, #0077b6);
+    transform: scale(1.01);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.35);
+
 }
 
 .project-info {
