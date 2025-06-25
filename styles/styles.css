@@ -9,6 +9,7 @@
 
     --primary-text-color: #ffffff;
     --secondary-text-color: #9dadbe;
+    --secondary-text-color-rgb: 157, 173, 190;
   
     /* -- fonts -- */
     --primary-font: 'Inter', 'Raleway', sans-serif;
@@ -36,6 +37,17 @@
 
 
 /* ----- END ANIMATIONS ----- */
+
+
+/* ----- QUERIES ----- */
+@media (max-width: 768px) {
+    .modal {
+        width: 90vw;
+        height: 80vh;
+    }
+}
+
+/* ----- END QUERIES ----- */
 
 
 /* ----- GENERAL ----- */
@@ -315,11 +327,11 @@ section {
     transition: transform 0.2s ease-in-out;
 }
 
-.skill-tag:hover {
+.skills-container .skill-tag:hover {
     transform: translateY(-6px);
 }
 
-.skill-tag:active {
+.skills-container .skill-tag:active {
     animation: skill-tag-shake 0.3s ease-in-out;
 }
 
@@ -385,6 +397,126 @@ section {
 }
 
 /* ----- END PROJECTS SECTION ----- */
+
+
+/* ----- PROJECTS MODAL ----- */
+.modal-overlay {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.modal {
+    position: relative;
+
+    height: 640px;
+    aspect-ratio: 9 / 12;
+    margin-top: 30px;
+    z-index: 1001;
+    overflow: auto;
+    
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.65);
+    background-color: var(--background-color);
+}
+
+.modal-close-button {
+    position: absolute;
+    top: 0.75rem;
+    right: 1rem;
+        
+    font-size: 1.5rem;
+    line-height: 1;
+    cursor: pointer;
+    
+    width: 24px;
+    background-color: rgba(var(--secondary-text-color-rgb), 0.4);
+    border-radius: 999px;
+    border: none;
+}
+
+.modal-close-button:hover {
+    background-color: rgba(var(--secondary-text-color-rgb), 0.9);
+}
+
+.modal-content {
+    display: flex;
+    aspect-ratio: 9 / 12;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: space-between;
+    overflow: auto;
+}
+
+.modal-project-image {
+    flex: 1;
+    background-size: cover;
+    background-position: center;
+    background-color: var(--border-color);
+}
+
+.modal-project-info {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: baseline;
+    padding: 2rem 1.5rem;
+
+}
+
+.modal-project-title {
+    padding-bottom: 0.25rem;
+}
+
+.modal-project-skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    padding: 0;
+    padding-bottom: 0.5rem;
+    gap: 0.5rem;
+}
+
+.modal-project-info .skill-tag{
+    height: 16px;
+    font-size: 10px;
+    padding: 0 0.5rem;
+}
+
+.modal-project-description {
+    padding-bottom: 1.5rem;
+    font-weight: 300;
+    color: var(--secondary-text-color);
+}
+
+.modal-project-contribution-list {
+    padding-left: 1rem;
+    font-size: 16px;
+    font-weight: 300;
+    color: var(--secondary-text-color);
+}
+
+.modal-project-contribution-list-item {
+    padding-bottom: 4px;
+}
+
+
+
+#modals div:nth-of-type(1) .modal-project-image {
+    background-image: url('https://i.pcmag.com/imagery/reviews/04qHO614ypU9ShCtnbBTpah-1..v1647977891.png');
+}
+
+
+/* ----- END PROJECTS MODAL ----- */
 
 
 /* ----- EXPERIENCES SECTION ----- */
