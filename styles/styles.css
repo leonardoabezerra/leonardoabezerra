@@ -353,6 +353,7 @@ section {
     gap: 1rem;
     transition: transform 0.2s ease-in-out;
     transition: background-color 0.3s ease color 0.3s ease;
+    cursor: pointer;
 }
 
 .project-card:hover {
@@ -401,7 +402,7 @@ section {
 
 /* ----- PROJECTS MODAL ----- */
 .modal-overlay {
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
     position: fixed;
@@ -415,7 +416,7 @@ section {
 }
 
 .modal {
-    position: relative;
+    position: fixed;
 
     height: 640px;
     aspect-ratio: 9 / 12;
