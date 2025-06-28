@@ -95,7 +95,7 @@
             <section id="projects">
                 <h2>Projetos</h2>
 
-                <article id="SideChef-card" class="project-card">
+                <article id="project1-card" class="project-card" data-target-modal="project1-modal">
                     <div class="project-info">
                         <p class="project-title">SideChef</p>
                         <p class="project-description">Mauris non sodales quam, quis rhoncus libero. Sed eget odio in arcu porta gravida quis at ex. Vestibulum pellentesque suscipit mauris, eget efficitur orci rutrum non.</p>
@@ -103,7 +103,7 @@
                     <div class="project-image"></div>
                 </article>
 
-                <article class="project-card">
+                <article id="project2-card" class="project-card" data-target-modal="project2-modal">
                     <div class="project-info">
                         <p class="project-title">AAGIS</p>
                         <p class="project-description">Cras congue, nisi a convallis fermentum, dolor turpis lobortis ligula, id tincidunt sapien elit sit amet quam. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Integer posuere suscipit nunc imperdiet dictum.</p>
@@ -113,8 +113,8 @@
             </section>
 
             <!-- PROJECT MODALS -->
-             <div id="modals" class="modal-overlay">
-                 <div id="SideChef-Modal" class="modal">
+            <div id="project1-modal" class="modal-overlay">
+                <div class="modal">
                     <button class="modal-close-button">&times;</button>
                     <div class="modal-content">
                         <div class="modal-project-image"></div>
@@ -129,13 +129,35 @@
                             <ul class="modal-project-contribution-list">
                                 <li class="modal-project-contribution-list-item">Contruibuicao 1</li>
                                 <li class="modal-project-contribution-list-item">Contruibuicao 2</li>
-    
                             </ul>
                         </div>
                     </div>
-                 </div>
-             </div>
+                </div>
+            </div>
 
+            <div id="project2-modal" class="modal-overlay">
+                <div class="modal">
+                    <button class="modal-close-button">&times;</button>
+                    <div class="modal-content">
+                        <div class="modal-project-image"></div>
+                        <div class="modal-project-info">
+                            <h2 class="modal-project-title">Projeto: AAGIS</h2>
+                            <div class="modal-project-skills-container">
+                                <span class="skill-tag">JavaScript</span>
+                                <span class="skill-tag">Node.js</span>
+                            </div>
+                            <p class="modal-project-description">Mauris non sodales quam, quis rhoncus libero. Sed eget odio in arcu porta gravida quis at ex. Vestibulum pellentesque suscipit mauris, eget efficitur orci rutrum non.</p>
+                            <h3 class="modal-project-contribution">Minha Contribuição</h3>
+                            <ul class="modal-project-contribution-list">
+                                <li class="modal-project-contribution-list-item">Contruibuicao 1</li>
+                                <li class="modal-project-contribution-list-item">Contruibuicao 2</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- END PROJECT MODALS -->
 
             <section id="experiences">
                 <h2>Experiências</h2>
@@ -184,24 +206,38 @@
     </div>    
 
     <script>
-        const modal_overlay = document.getElementById('modals');
-        const sidechef_btn = document.getElementById('SideChef-card');
-        const modal_close_btn = document.querySelector('.modal-close-button');
+    const open_modal_triggers = document.querySelectorAll('[data-target-modal]');
+    const close_modal_triggers = document.querySelectorAll('.modal-close-button');
 
-        sidechef_btn.onclick = function() {
-            modal_overlay.style.display = 'flex';
-        }
+    open_modal_triggers.forEach(trigger => {
+        trigger.addEventListener('click', () => {
+            const modal_id = trigger.dataset.targetModal;
+            const modal = document.querySelector(`#${modal_id}`);
 
-        modal_close_btn.onclick = function() {
-            modal_overlay.style.display = 'none';
-        }
-
-        window.onclick = function(event) {
-            if (event.target == modal_overlay) {
-                modal_overlay.style.display = 'none';
+            if (modal) {
+                modal.style.display = 'flex';
             }
-        }
+        });
+    });
 
+    close_modal_triggers.forEach(trigger => {
+        trigger.addEventListener('click', () => {
+            const modal = trigger.closest('.modal-overlay');
+
+            if (modal) {
+                modal.style.display = 'none';
+            }
+        });
+    });
+
+    document.querySelectorAll('.modal-overlay').forEach(overlay => {
+        overlay.addEventListener('click', (event) => {
+
+            if (event.target === overlay) {
+                overlay.style.display = 'none';
+            }
+        });
+    });
 
     </script>
 </body>
