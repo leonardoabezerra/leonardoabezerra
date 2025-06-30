@@ -113,6 +113,10 @@ section {
     padding: 1.25rem 0;
 }
 
+/* -- function classes -- */
+.not-selected {
+    opacity: 0.5;
+}
 
 /* -- scrollbar -- */
 ::-webkit-scrollbar {
@@ -353,6 +357,7 @@ section {
     gap: 1rem;
     transition: transform 0.2s ease-in-out;
     transition: background-color 0.3s ease color 0.3s ease;
+    transition: opacity 0.3s ease-in-out;
     cursor: pointer;
 }
 
@@ -360,7 +365,11 @@ section {
     background-color: var(--border-color, #0077b6);
     transform: scale(1.01);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.35);
+    transition: transform 0.2s ease-in;
+}
 
+.project-card:active {
+    transform: scale(1);
 }
 
 .project-info {
@@ -413,6 +422,8 @@ section {
     z-index: 1000;
 
     background-color: rgba(0, 0, 0, 0.6);
+    transition: color 2s ease;
+
 }
 
 .modal {

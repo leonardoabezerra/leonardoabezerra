@@ -206,6 +206,8 @@
     </div>    
 
     <script>
+
+    // ----- MODAL SCRIPTS -----    
     const open_modal_triggers = document.querySelectorAll('[data-target-modal]');
     const close_modal_triggers = document.querySelectorAll('.modal-close-button');
 
@@ -239,6 +241,30 @@
         });
     });
 
+
+    // ----- PROJECT CARDS SCRIPTS -----
+    const project_cards = document.querySelectorAll('.project-card');
+
+    project_cards.forEach(card => {
+        card.addEventListener('mouseenter', () => {
+            project_cards.forEach(othercards => {
+                if (othercards !== card) {
+                    othercards.classList.add('not-selected');
+                }
+            });
+        });
+    });
+
+    project_cards.forEach(card => {
+        card.addEventListener('mouseleave', () => {
+            project_cards.forEach(othercards => {
+                if (othercards !== card) {
+                    othercards.classList.remove('not-selected');
+                }
+            });
+        });
+    });
+ 
     </script>
 </body>
 </html>
