@@ -543,8 +543,24 @@ section {
 
 .timeline-item {
     position: relative;
-    margin-bottom: 2.5rem;
-    margin-left: 1rem;
+    padding-top: 0.25rem;
+    padding-bottom: 1.5rem;
+    padding-left: 1rem;
+    margin-bottom: 0.75rem;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+
+    transition: background-color 0.3s ease-in-out, opacity 0.2s ease-in-out;
+}
+
+.timeline-item:hover {
+    background-color: var(--border-color, #0077b6);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.timeline-item:hover .timeline-dot {
+    opacity: 0;
+    transform: scale(0.5);
 }
 
 .timeline-item:last-child {
@@ -554,13 +570,14 @@ section {
 /* -- Timeline dot -- */
 .timeline-dot {
     position: absolute;
-    left: -1.5rem;
-    top: 0.23rem;
+    left: -0.5rem;
+    top: 0.4rem;
     width: 0.95rem;
     height: 0.95rem;;
     background-color: var(--border-color);
     border: 2px solid var(--background-color);
     border-radius: 50%;
+    transition: transform 0.3s ease-in-out, opacity 0.4s ease;
 }
 
 /* -- Timeline content -- */

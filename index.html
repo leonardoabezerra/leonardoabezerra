@@ -265,6 +265,29 @@
         });
     });
  
+    // ----- TIMELINE SCRIPTS -----
+    const timeline_item = document.querySelectorAll('.timeline-item');
+
+    timeline_item.forEach(item => {
+        item.addEventListener('mouseenter', () => {
+            timeline_item.forEach(otheritems => {
+                if (otheritems !== item) {
+                    otheritems.classList.add('not-selected');
+                }
+            });
+        });
+    });
+
+    timeline_item.forEach(item => {
+        item.addEventListener('mouseleave', () => {
+            timeline_item.forEach(otheritem => {
+                if (otheritem !== item) {
+                    otheritem.classList.remove('not-selected');
+                }
+            });
+        });
+    });
+
     </script>
 </body>
 </html>
