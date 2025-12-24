@@ -357,6 +357,7 @@ section {
     margin-bottom: 2rem;
 }
 
+
 .project-card {
     display: flex;
     align-items: stretch;
@@ -364,6 +365,9 @@ section {
     padding-left: 0.25rem;
     border-radius: 10px;
     gap: 1rem;
+    margin-bottom: 0 !important;
+
+
     transition: transform 0.2s ease-in-out;
     transition: background-color 0.3s ease color 0.3s ease;
     transition: opacity 0.3s ease-in-out;
@@ -420,14 +424,35 @@ section {
 
 /* ----- PROJECTS COLLAPSIBLE ----- */
 .project-card-collapsible-content {
-    padding-left: 0.25rem;
-    border-radius: 10px;
+    padding-inline: 1rem;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.2 ease-out;
-    background-color: var(--border-color);
+    background-color: #2b35404a;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.35);
+
 }
 
+.project-card-collapsible-description {
+    padding-bottom: 1.5rem;
+    font-size: 15px;
+    font-weight: 400;
+    color: var(--secondary-text-color);
+}
+
+.project-card-collapsible-contribution-list {
+    padding-left: 1rem;
+    padding-bottom: 1rem;
+    font-size: 15px;
+    font-weight: 400;
+    color: var(--secondary-text-color);
+}
+
+.project-card-collapsible-contribution-list-item {
+    padding-bottom: 4px;
+}
 
 /* ----- PROJECTS MODAL ----- */
 .modal-overlay {
@@ -524,22 +549,6 @@ section {
     padding: 0 0.5rem;
 }
 
-.modal-project-description {
-    padding-bottom: 1.5rem;
-    font-weight: 300;
-    color: var(--secondary-text-color);
-}
-
-.modal-project-contribution-list {
-    padding-left: 1rem;
-    font-size: 16px;
-    font-weight: 300;
-    color: var(--secondary-text-color);
-}
-
-.modal-project-contribution-list-item {
-    padding-bottom: 4px;
-}
 
 
 
