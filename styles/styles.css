@@ -357,7 +357,6 @@ section {
     margin-bottom: 2rem;
 }
 
-
 .project-card {
     display: flex;
     align-items: stretch;
@@ -386,6 +385,8 @@ section {
 }
 
 .project-info {
+    padding-left: 0.25rem;
+    padding-top: 0.25rem;
     flex: 2;
     display: flex;
     flex-direction: column;
@@ -424,12 +425,13 @@ section {
 
 /* ----- PROJECTS COLLAPSIBLE ----- */
 .project-card-collapsible-content {
+    margin-top: 0;
     padding-inline: 1rem;
     border-bottom-right-radius: 10px;
     border-bottom-left-radius: 10px;
     max-height: 0;
+    transition: max-height 0.1s ease-out;
     overflow: hidden;
-    transition: max-height 0.2 ease-out;
     background-color: #2b35404a;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.35);
 
