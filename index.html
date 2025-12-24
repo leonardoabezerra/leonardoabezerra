@@ -128,6 +128,16 @@
                     </div>
                     <div class="project-image"></div>
                 </article>
+                <div class="project-card-collapsible-content">
+                    <p class="modal-project-description"><br>O objetivo é um aplicativo que possa ajudar o usuário a cozinhar diversas receitas baseadas nos ingredientes que ele possui à disposição em casa.
+                        <br><br>O usuário pode tirar uma foto dos ingredientes que possui em casa, que serão identificados pelo OCR e utilizados para filtrar receitas que podem ser feitas com aqueles ingredientes.
+                        <br><br>O desenvolvimento do aplicativo ocorreu durante o semestre por uma equipe de 13 estudantes.
+                    </p>
+                    <h3 class="modal-project-contribution">Minha Contribuição</h3>
+                    <ul class="modal-project-contribution-list">
+                        <li class="modal-project-contribution-list-item">Fui exclusivamente responsável pela implementação do OCR e pela integração do mesmo com ambos backend e frontend.</li>
+                    </ul>
+                </div>
 
                 <article id="project2-card" class="project-card" data-target-modal="project2-modal">
                     <div class="project-info">
@@ -246,6 +256,7 @@
 
     <script>
 
+/*
     // ----- MODAL SCRIPTS -----    
     const open_modal_triggers = document.querySelectorAll('[data-target-modal]');
     const close_modal_triggers = document.querySelectorAll('.modal-close-button');
@@ -280,7 +291,7 @@
         });
     });
 
-
+*/
     // ----- PROJECT CARDS SCRIPTS -----
     const project_cards = document.querySelectorAll('.project-card');
 
@@ -295,15 +306,38 @@
     });
 
     project_cards.forEach(card => {
-        card.addEventListener('mouseleave', () => {
-            project_cards.forEach(othercards => {
-                if (othercards !== card) {
-                    othercards.classList.remove('not-selected');
-                }
+            card.addEventListener('mouseleave', () => {
+                project_cards.forEach(othercards => {
+                    if (!card.classList.contains('is-active') && othercards !== card) {
+                        othercards.classList.remove('not-selected');
+                    }
+                });
             });
-        });
     });
  
+
+    // ----- PROJECT CARD COLLAPSIBLE SCRIPTS ----
+    project_cards.forEach(card => {
+        card.addEventListener('click', function () {
+            this.classList.toggle(['active', 'hover']);
+            var content = this.nextElementSibling;
+            if (content.style.maxHeight) {
+                content.style.maxHeight = null;
+                card.classList.remove('is-active');
+                       
+            } else {
+                content.style.maxHeight = content.scrollHeight + "px";
+                card.classList.add('is-active');
+                project_cards.forEach(othercards => {
+                    if (othercards !== card) {
+                        othercards.classList.add('not-selected');
+                    }
+                })
+            }
+        });
+    });
+
+
     // ----- TIMELINE SCRIPTS -----
     const timeline_item = document.querySelectorAll('.timeline-item');
 
