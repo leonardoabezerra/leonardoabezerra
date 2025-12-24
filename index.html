@@ -159,64 +159,12 @@
 
             </section>
 
-            <!-- PROJECT MODALS -->
-            <div id="project1-modal" class="modal-overlay">
-                <div class="modal">
-                    <button class="modal-close-button">&times;</button>
-                    <div class="modal-content">
-                        <div class="modal-project-image"></div>
-                        <div class="modal-project-info">
-                            <h2 class="modal-project-title">Projeto: SideChef</h2>
-                            <div class="modal-project-skills-container">
-                                <span class="skill-tag">Python</span>
-                                <span class="skill-tag">FastAPI</span>
-                                <span class="skill-tag">TypeScript</span>
-                                <span class="skill-tag">Docker</span>
-                                <span class="skill-tag">Git/GitHub</span>
-                                <span class="skill-tag">Pytest</span>
-                            </div>
-                            <p class="modal-project-description"><br>O objetivo é um aplicativo que possa ajudar o usuário a cozinhar diversas receitas baseadas nos ingredientes que ele possui à disposição em casa.
-                                <br><br>O usuário pode tirar uma foto dos ingredientes que possui em casa, que serão identificados pelo OCR e utilizados para filtrar receitas que podem ser feitas com aqueles ingredientes.
-                                <br><br>O desenvolvimento do aplicativo ocorreu durante o semestre por uma equipe de 13 estudantes.
-                            </p>
-                            <h3 class="modal-project-contribution">Minha Contribuição</h3>
-                            <ul class="modal-project-contribution-list">
-                                <li class="modal-project-contribution-list-item">Fui exclusivamente responsável pela implementação do OCR e pela integração do mesmo com ambos backend e frontend.</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div id="project2-modal" class="modal-overlay">
-                <div class="modal">
-                    <button class="modal-close-button">&times;</button>
-                    <div class="modal-content">
-                        <div class="modal-project-image"></div>
-                        <div class="modal-project-info">
-                            <h2 class="modal-project-title">Projeto: AAGIS</h2>
-                            <div class="modal-project-skills-container">
-                                <span class="skill-tag">JavaScript</span>
-                                <span class="skill-tag">Node.js</span>
-                            </div>
-                            <p class="modal-project-description">Mauris non sodales quam, quis rhoncus libero. Sed eget odio in arcu porta gravida quis at ex. Vestibulum pellentesque suscipit mauris, eget efficitur orci rutrum non.</p>
-                            <h3 class="modal-project-contribution">Minha Contribuição</h3>
-                            <ul class="modal-project-contribution-list">
-                                <li class="modal-project-contribution-list-item">Contruibuicao 1</li>
-                                <li class="modal-project-contribution-list-item">Contruibuicao 2</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- END PROJECT MODALS -->
 
             <section id="experiences">
                 <h2>Experiências</h2>
 
                 <ol class="timeline">
-                    <li class="timeline-item">
+                    <li class="timeline-item"><a href="https://grupontsec.com.br/pt/" target="_blank" rel="noopener noreferrer">
                         <div class="timeline-dot"></div>
                         <time class="timeline-date">set 2025 - hoje</time>
                         <div class="title-content">
@@ -224,7 +172,7 @@
                             <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M7 17L17 7M17 7H8M17 7V16" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
                         </div>
                         <p class="timeline-description">Estágio na empresa de cibersegurança <b>Grupo NTSec</b>. Com carga horária de 30 horas semanais, este cargo na equipe de suporte da matriz NTSec tem provido uma incrível experiência no mercado de trabalho, com conhecimentos aprofundados em redes e cibersegurança, atendimento a clientes e troubleshooting de erros em soluções de segurança, especialmente com o Varonis, uma solução de auditoria incrivelmente robusta e reconhecida no mercado global.</p>
-                    </li>
+                    </a></li>
                     <li class="timeline-item"><a href="https://www.folhaunica.com.br" target="_blank" rel="noopener noreferrer">
                         <div class="timeline-dot"></div>
                         <time class="timeline-date">mar 2022 - dez 2022</time>
@@ -267,71 +215,44 @@
 
     <script>
 
-/*
-    // ----- MODAL SCRIPTS -----    
-    const open_modal_triggers = document.querySelectorAll('[data-target-modal]');
-    const close_modal_triggers = document.querySelectorAll('.modal-close-button');
-
-    open_modal_triggers.forEach(trigger => {
-        trigger.addEventListener('click', () => {
-            const modal_id = trigger.dataset.targetModal;
-            const modal = document.querySelector(`#${modal_id}`);
-
-            if (modal) {
-                modal.style.display = 'flex';
-            }
-        });
-    });
-
-    close_modal_triggers.forEach(trigger => {
-        trigger.addEventListener('click', () => {
-            const modal = trigger.closest('.modal-overlay');
-
-            if (modal) {
-                modal.style.display = 'none';
-            }
-        });
-    });
-
-    document.querySelectorAll('.modal-overlay').forEach(overlay => {
-        overlay.addEventListener('click', (event) => {
-
-            if (event.target === overlay) {
-                overlay.style.display = 'none';
-            }
-        });
-    });
-
-*/
     // ----- PROJECT CARDS SCRIPTS -----
     const project_cards = document.querySelectorAll('.project-card');
 
     project_cards.forEach(card => {
         card.addEventListener('mouseenter', () => {
             card.classList.remove('not-selected');
-            project_cards.forEach(othercards => {
-                if (othercards !== card) {
-                    othercards.classList.add('not-selected');
+            project_cards.forEach(otherCards => {
+                if (otherCards !== card) {
+                    otherCards.classList.add('not-selected');
                 }
             });
         });
     });
 
     project_cards.forEach(card => {
-            card.addEventListener('mouseleave', () => {
-                project_cards.forEach(othercards => {
-                    if (!card.classList.contains('is-active') && othercards !== card) {
-                        othercards.classList.remove('not-selected');
+        card.addEventListener('mouseleave', () => {
+            const activeCard = Array.from(project_cards).find(c => c.classList.contains('is-active'))
+
+            if (activeCard) {
+                activeCard.classList.remove('not-selected');
+                project_cards.forEach(c => {
+                    if (c !== activeCard) {
+                        c.classList.add('not-selected')
                     }
+                });               
+            } else {
+                project_cards.forEach(c => {
+                    c.classList.remove('not-selected');
                 });
-            });
+            }
+        });
     });
- 
+
 
     // ----- PROJECT CARD COLLAPSIBLE SCRIPTS ----
     project_cards.forEach(card => {
         card.addEventListener('click', function () {
-            this.classList.toggle('active');
+            
             var content = this.nextElementSibling;
             if (content.style.maxHeight) {
                 content.style.maxHeight = null;
@@ -345,6 +266,7 @@
                     if (othercards !== card) {
                         let otherContent = othercards.nextElementSibling;
                         otherContent.style.maxHeight = null;
+                        
                         
                         othercards.classList.remove('is-active');
                         othercards.classList.add('not-selected');
