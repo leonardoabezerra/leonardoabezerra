@@ -21,7 +21,7 @@ Feel free to explore my portfolio and contact me!
 <a href="mailto:leonardoalvesbezerra@gmail.com" target="_blank" rel="noopener noreferrer">
     <img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Gmail Badge"/>
 </a>
-<a href="https://leonardoabezerra.github.io" target="_blank" rel="noopener noreferrer">
+<a href="https://leonardoabezerra.github.io/my-portfolio" target="_blank" rel="noopener noreferrer">
     <img src="https://img.shields.io/badge/Portfolio-brightgreen?style=for-the-badge&logo=github"/>
 </a>
 </div>
