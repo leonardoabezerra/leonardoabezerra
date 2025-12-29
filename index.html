@@ -28,6 +28,7 @@
                         <li><a href="#skills">Skills</a></li>
                         <li><a href="#projects">Projetos</a></li>
                         <li><a href="#experiences">Experiências</a></li>
+                        <li><a href="#references">Referências</a></li>
                         <li class="has-dropdown"><a href="#footer">Contato</a>
                             <ul class="dropdown-menu">
                                 <li><a href="https://www.linkedin.com/in/leonardoabezerra" target="_blank" rel="noopener noreferrer" class="linkedin-icon">
@@ -143,6 +144,8 @@
                     <div class="project-info">
                         <p class="project-title">SideChef</p>
                         <p class="project-description">SideChef é um projeto desenvolvido na disciplina de Métodos de Desenvolvimento de Software. Consiste em um aplicativo mobile de receitas focado em seu diferencial, a leitura de ingredientes por OCR (Optical Recognition Character).</p>
+                        <br></br>
+                        <p>Ler mais - TODO</p>
                     </div>
                     <div class="project-image"></div>
                 </article>
@@ -186,6 +189,42 @@
 
                 </ol>
             </section>
+
+
+            <section id="references">
+                <h2>Referências</h2>
+
+                <ul class="reference-list">
+                    <li><b class="reference-title">Grupo NTSec: </b> Taciana Rocha de Carvalho — <a href="https://wa.me/5561996569945?text=Olá,%20Leonardo%20Alves%20Bezerra%20lhe%20apontou%20como%20referência." target="_blank" rel="noopener noreferrer">+55 61 99656-9945</a>
+                        <button class="btn-copy" onclick="copyAnimation(this)">
+                            <svg class="copy-icon" title="Copiar" width="64px" height="64px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <rect x="6.5" y="6.5" width="9" height="13" rx="1.5" stroke="currentColor"></rect> 
+                                <path d="M8.5 6C8.5 5.17157 9.17157 4.5 10 4.5H16C16.8284 4.5 17.5 5.17157 17.5 6V16C17.5 16.8284 16.8284 17.5 16 17.5" stroke="currentColor"></path> </g>
+                            </svg>
+
+                            <svg class="copy-check" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> 
+                                <path d="M4 12.6111L8.92308 17.5L20 6.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g>
+                            </svg>
+                        </button>
+                    <li><b class="reference-title">Folha Única: </b> Diogo Schwartz — <a href="https://wa.me/5561985751809?text=Olá,%20Leonardo%20Alves%20Bezerra%20lhe%20apontou%20como%20referência." target="_blank" rel="noopener noreferrer">+55 61 98575-1809</a>
+                        <button class="btn-copy" onclick="copyAnimation(this)">
+                            <svg class="copy-icon" title="Copiar" width="64px" height="64px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <rect x="6.5" y="6.5" width="9" height="13" rx="1.5" stroke="currentColor"></rect> 
+                                <path d="M8.5 6C8.5 5.17157 9.17157 4.5 10 4.5H16C16.8284 4.5 17.5 5.17157 17.5 6V16C17.5 16.8284 16.8284 17.5 16 17.5" stroke="currentColor"></path> </g>
+                            </svg>
+
+                            <svg class="copy-check" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> 
+                                <path d="M4 12.6111L8.92308 17.5L20 6.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g>
+                            </svg>
+                        </button>
+                    </li>
+                    
+                </ul>
+
+
+
+                
+                
+            </section>
+            
 
         </main>
 
@@ -299,6 +338,25 @@
             });
         });
     });
+
+    // ----- COPY ICON -----
+
+    async function copyAnimation(icon) {
+        icon.classList.add('copied');
+
+        let text_to_copy = icon.previousElementSibling.textContent;
+
+        try {
+            await navigator.clipboard.writeText(text_to_copy);
+        } catch (err) {
+            console.error("Failed to copy text to clipboard: ", error);
+            alert("Falha ao copiar texto.");
+        }
+
+        setTimeout(() => {
+            icon.classList.remove('copied');
+        }, 2000);
+    }
 
     </script>
 </body>
