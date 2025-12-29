@@ -41,9 +41,8 @@
 
 /* ----- QUERIES ----- */
 @media (max-width: 768px) {
-    .modal {
-        width: 90vw;
-        height: 80vh;
+    .project-read-more {
+        opacity: 0.9 !important;
     }
 }
 
@@ -116,6 +115,13 @@ section {
 /* -- function classes -- */
 .not-selected {
     opacity: 0.5;
+}
+
+.is-active {
+    background-color: var(--border-color, #0077b6);
+    transform: scale(1.01);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.35);
+    transition: transform 0.2s ease-in;
 }
 
 /* -- scrollbar -- */
@@ -329,6 +335,8 @@ section {
     font-size: 14px;
     font-weight: 400;
     transition: transform 0.2s ease-in-out;
+    border: 1px solid rgba(177, 177, 177, 0.3);
+    box-shadow: 0px 1px 1px rgba(177, 177, 177, 0.25);
 }
 
 .skills-container .skill-tag:hover {
@@ -355,6 +363,9 @@ section {
     padding-left: 0.25rem;
     border-radius: 10px;
     gap: 1rem;
+    margin-bottom: 0 !important;
+
+
     transition: transform 0.2s ease-in-out;
     transition: background-color 0.3s ease color 0.3s ease;
     transition: opacity 0.3s ease-in-out;
@@ -373,6 +384,8 @@ section {
 }
 
 .project-info {
+    padding-left: 0.25rem;
+    padding-top: 0.25rem;
     flex: 2;
     display: flex;
     flex-direction: column;
@@ -389,6 +402,22 @@ section {
     color: var(--secondary-text-color);
 }
 
+.project-read-more {
+    font-size: 12px;
+    color: var(--secondary-text-color);
+    font-weight: 400;
+    opacity: 0;
+    transition: all ease-out 0.1s;
+}
+
+.project-card:hover .project-read-more {
+    opacity: 0.9;
+}
+
+.project-card.is-active .project-read-more {
+    opacity: 0.9;
+}
+
 .project-image {
     flex: 1;
     aspect-ratio: 16 / 9;
@@ -400,138 +429,45 @@ section {
 
 /* -- Project images -- */
 #project1-card .project-image {
-    background-image: url('https://i.pcmag.com/imagery/reviews/04qHO614ypU9ShCtnbBTpah-1..v1647977891.png');
+    background-image: url('../assets/SideChef.png');
 }
-#project2-card .project-image {
-    background-image: url('https://i.ytimg.com/vi/PUnA5tk0Ilw/maxresdefault.jpg')
-}
+
 
 /* ----- END PROJECTS SECTION ----- */
 
 
-/* ----- PROJECTS MODAL ----- */
-.modal-overlay {
-    display: none;
-    align-items: center;
-    justify-content: center;
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    z-index: 1000;
-
-    background-color: rgba(0, 0, 0, 0.6);
-    transition: color 2s ease;
+/* ----- PROJECTS COLLAPSIBLE ----- */
+.project-card-collapsible-content {
+    margin-top: 0;
+    padding-inline: 1rem;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    max-height: 0;
+    transition: max-height 0.1s ease-out;
+    overflow: hidden;
+    background-color: #2b35404a;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.35);
 
 }
 
-.modal {
-    position: fixed;
-
-    height: 640px;
-    aspect-ratio: 9 / 12;
-    margin-top: 30px;
-    z-index: 1001;
-    overflow: auto;
-    
-    border: 1px solid var(--border-color);
-    border-radius: 10px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.65);
-    background-color: var(--background-color);
-}
-
-.modal-close-button {
-    position: absolute;
-    top: 0.75rem;
-    right: 1rem;
-        
-    font-size: 1.5rem;
-    line-height: 1;
-    cursor: pointer;
-    
-    width: 24px;
-    background-color: rgba(var(--secondary-text-color-rgb), 0.4);
-    border-radius: 999px;
-    border: none;
-}
-
-.modal-close-button:hover {
-    background-color: rgba(var(--secondary-text-color-rgb), 0.9);
-}
-
-.modal-content {
-    display: flex;
-    aspect-ratio: 9 / 12;
-    flex-direction: column;
-    align-items: stretch;
-    justify-content: space-between;
-    overflow: auto;
-}
-
-.modal-project-image {
-    flex: 1;
-    background-size: cover;
-    background-position: center;
-    background-color: var(--border-color);
-}
-
-.modal-project-info {
-    flex: 2;
-    display: flex;
-    flex-direction: column;
-    justify-content: baseline;
-    padding: 2rem 1.5rem;
-
-}
-
-.modal-project-title {
-    padding-bottom: 0.25rem;
-}
-
-.modal-project-skills-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.75rem;
-    padding: 0;
-    padding-bottom: 0.5rem;
-    gap: 0.5rem;
-}
-
-.modal-project-info .skill-tag{
-    height: 16px;
-    font-size: 10px;
-    padding: 0 0.5rem;
-}
-
-.modal-project-description {
+.project-card-collapsible-description {
     padding-bottom: 1.5rem;
-    font-weight: 300;
+    font-size: 15px;
+    font-weight: 400;
     color: var(--secondary-text-color);
 }
 
-.modal-project-contribution-list {
+.project-card-collapsible-contribution-list {
     padding-left: 1rem;
-    font-size: 16px;
-    font-weight: 300;
+    padding-bottom: 1rem;
+    font-size: 15px;
+    font-weight: 400;
     color: var(--secondary-text-color);
 }
 
-.modal-project-contribution-list-item {
+.project-card-collapsible-contribution-list-item {
     padding-bottom: 4px;
 }
-
-
-
-#project1-modal .modal-project-image {
-    background-image: url('https://i.pcmag.com/imagery/reviews/04qHO614ypU9ShCtnbBTpah-1..v1647977891.png');
-}
-
-#project2-modal .modal-project-image {
-    background-image: url('https://i.ytimg.com/vi/PUnA5tk0Ilw/maxresdefault.jpg');
-}
-
-/* ----- END PROJECTS MODAL ----- */
 
 
 /* ----- EXPERIENCES SECTION ----- */
@@ -623,6 +559,84 @@ section {
 
 
 /* ----- END EXPERIENCES SECTION ----- */
+
+
+/* ----- REFERENCES SECTION ----- */
+
+.reference-list {
+    padding-left: 1.5rem;
+    color: var(--secondary-text-color);
+    font-weight: 300;
+}
+
+#references li {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.reference-title {
+    font-size: 16px;
+    color: var(--secondary-text-color);
+    font-weight: 800;
+}
+
+#references a {
+    color: var(--secondary-text-color);
+    transition: color ease 0.3s
+}
+
+#references a:hover {
+    color: var(--primary-text-color);
+}
+
+#references .btn-copy {
+    display: grid;
+    place-items: center;
+
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    color: var(--secondary-text-color);
+}
+
+#references .btn-copy svg {
+    grid-area: 1 / 1;
+    height: 24px;
+    width: 24px;
+    color: var(--secondary-text-color);
+    transition: color ease 0.3s;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275)
+}
+
+#references svg:hover {
+    color: var(--primary-text-color);
+}
+
+#references .copy-icon {
+    opacity: 1;
+    transform: scale(1) rotate(0deg);
+}
+
+#references .copy-check {
+    opacity: 0;
+    transform: scale(0.5) rotate(-90deg);
+    z-index: -100;
+}
+
+#references .btn-copy.copied .copy-icon {
+    opacity: 0;
+    transform: scale(0.5);
+}
+
+#references .btn-copy.copied .copy-check {
+    opacity: 1;
+    transform: scale(1) rotate(0deg);
+    z-index: 1;
+}
+
+
+/* ----- END REFERENCES SECTION ----- */
 
 
 /* ----- FOOTER ----- */
