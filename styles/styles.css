@@ -429,11 +429,9 @@ section {
 
 /* -- Project images -- */
 #project1-card .project-image {
-    background-image: url('https://i.pcmag.com/imagery/reviews/04qHO614ypU9ShCtnbBTpah-1..v1647977891.png');
+    background-image: url('../assets/SideChef.png');
 }
-#project2-card .project-image {
-    background-image: url('https://i.ytimg.com/vi/PUnA5tk0Ilw/maxresdefault.jpg')
-}
+
 
 /* ----- END PROJECTS SECTION ----- */
 
