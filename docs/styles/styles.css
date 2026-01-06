@@ -10,6 +10,9 @@
     --primary-text-color: #ffffff;
     --secondary-text-color: #9dadbe;
     --secondary-text-color-rgb: 157, 173, 190;
+
+    --hyperlink-color: #4381b4;
+    --hyperlink-hover: #346288;
   
     /* -- fonts -- */
     --primary-font: 'Inter', 'Raleway', sans-serif;
@@ -69,19 +72,39 @@ body {
     line-height: 1.5;
 }
 
+h1 {
+    font-size: 32px;
+    font-weight: 800;
+    letter-spacing: -0.015em;
+    padding-bottom: 1rem;
+}
+
 h2 {
-    font-size: 22px;
+    font-size: 24px;
     font-weight: 600;
     letter-spacing: -0.015em;
     padding-bottom: 1rem;
 }
 
 h3 {
-    font-size: 18px;
-    font-weight: 500;
+    font-size: 16px;
+    font-weight: 400;
     letter-spacing: -0.015em;
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
+}
+
+h4 {
+    font-size: 16px;
+    font-weight: 300;
+    letter-spacing: -0.015em;
+    padding-top: 0.5rem;
+    padding-bottom: 0.25rem;
+}
+
+p {
+    color: var(--secondary-text-color);
+    font-weight: 400;
 }
 
 a {
@@ -95,7 +118,7 @@ a:hover {
 }
 
 section {
-      padding: 1rem 1.5rem;
+      padding: 3rem 1.5rem;
 }
 
 .cv-container {
@@ -294,9 +317,12 @@ section {
 
 .profile-name {
     font-family: var(--title-font);
-    font-size: 22px;
     font-weight: 600;
     letter-spacing: -0.015em;
+}
+
+.profile-section p {
+    font-size: 20px;
 }
 
 .profile-graduation,
@@ -310,8 +336,16 @@ section {
 .biography-section p,
 #competencies p {
     font-size: 14px;
-    font-weight: 300;
-    color: var(--primary-text-color);
+    color: var(--secondary-text-color);
+    line-height: 1.5rem;
+}
+
+.biography-section a {
+    color: var(--hyperlink-color);
+}
+
+.biography-section a:hover{
+    color: var(--hyperlink-hover);
 }
 /* ----- END BIOGRAPHY SECTION */
 
@@ -322,6 +356,10 @@ section {
     flex-wrap: wrap;
     gap: 0.75rem;
     padding: 0.75rem 0;
+}
+
+.skill-h3 {
+    font-weight: 300;
 }
 
 .skill-tag {
@@ -390,11 +428,6 @@ section {
     display: flex;
     flex-direction: column;
     justify-content: baseline;
-}
-
-.project-title {
-    font-size: 16px;
-    font-weight: 600;
 }
 
 .project-description {
