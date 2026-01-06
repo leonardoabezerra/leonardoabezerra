@@ -176,7 +176,7 @@ section {
     gap: 1rem;
 }
 
-.logo-container a{
+.logo-container a {
     all: unset;
     cursor: pointer;
 }
