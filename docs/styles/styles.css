@@ -407,19 +407,25 @@ section {
     border-radius: 10px;
     gap: 1rem;
     margin-bottom: 0 !important;
-
-
-    transition: transform 0.2s ease-in-out;
-    transition: background-color 0.3s ease color 0.3s ease;
-    transition: opacity 0.3s ease-in-out;
     cursor: pointer;
+
+    transition:
+        transform 0.2s ease-in-out,
+        background-color 0.3s ease,
+        color 0.8s ease,
+        opacity 0.3s ease-in-out,
+        box-shadow 0.4s ease;
+
 }
 
 .project-card:hover {
     background-color: var(--border-color, #0077b6);
     transform: scale(1.01);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.35);
-    transition: transform 0.2s ease-in;
+    transition: 
+        transform 0.2s ease-in,
+        background-color 0.3s ease,
+        box-shadow 0.3s ease;
 }
 
 .project-card:active {
@@ -448,14 +454,6 @@ section {
     font-weight: 400;
     opacity: 0;
     transition: all ease-out 0.1s;
-}
-
-.project-card:hover .project-read-more {
-    opacity: 0.9;
-}
-
-.project-card.is-active .project-read-more {
-    opacity: 0.9;
 }
 
 .project-image {

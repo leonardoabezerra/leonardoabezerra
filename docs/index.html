@@ -26,7 +26,7 @@
             <div class="header-right">
                 <nav class="main-nav">
                     <ul>
-                        <li><a href="#about">Sobre</a></li>
+                        <li><a href="#about">Sobre</a></li> <!-- TODO: Keep it selected while page is in the correct section -->
                         <li><a href="#skills">Skills</a></li>
                         <li><a href="#projects">Projetos</a></li>
                         <li><a href="#experiences">Experiências</a></li>
@@ -143,6 +143,45 @@
                     </ul>
                 </article>
 
+                <article id="project2-card" class="project-card">
+                    <div class="project-info">
+                        <h3 class="project-title">SideChef</h3>
+                        <p class="project-description">SideChef é um projeto desenvolvido na disciplina de Métodos de Desenvolvimento de Software. Consiste em um aplicativo mobile de receitas focado em seu diferencial, a leitura de ingredientes por OCR (Optical Character Recognition).</p>
+                        <br>
+                    </div>
+                    <div class="project-image"></div>
+                </article>
+                <article class="project-card-collapsible-content">
+                    <p class="project-card-collapsible-description"><br>O objetivo é um aplicativo que possa ajudar o usuário a cozinhar diversas receitas baseadas nos ingredientes que ele possui à disposição em casa.
+                        <br><br>O usuário pode tirar uma foto dos ingredientes que possui em casa, que serão identificados pelo OCR e utilizados para filtrar receitas que podem ser feitas com aqueles ingredientes.
+                        <br><br>O desenvolvimento do aplicativo ocorreu durante o semestre por uma equipe de 13 estudantes.
+                    </p>
+                    <h4 class="project-card-collapsible-contribution">Minha Contribuição</h3>
+                    <ul class="project-card-collapsible-contribution-list">
+                        <li class="project-card-collapsible-contribution-list-item">Fui exclusivamente responsável pela implementação do OCR e pela integração do mesmo com ambos backend e frontend.</li>
+                    </ul>
+                </article>
+
+                 <article id="project3-card" class="project-card">
+                    <div class="project-info">
+                        <h3 class="project-title">SideChef</h3>
+                        <p class="project-description">SideChef é um projeto desenvolvido na disciplina de Métodos de Desenvolvimento de Software. Consiste em um aplicativo mobile de receitas focado em seu diferencial, a leitura de ingredientes por OCR (Optical Character Recognition).</p>
+                        <br>
+                    </div>
+                    <div class="project-image"></div>
+                </article>
+                <article class="project-card-collapsible-content">
+                    <p class="project-card-collapsible-description"><br>O objetivo é um aplicativo que possa ajudar o usuário a cozinhar diversas receitas baseadas nos ingredientes que ele possui à disposição em casa.
+                        <br><br>O usuário pode tirar uma foto dos ingredientes que possui em casa, que serão identificados pelo OCR e utilizados para filtrar receitas que podem ser feitas com aqueles ingredientes.
+                        <br><br>O desenvolvimento do aplicativo ocorreu durante o semestre por uma equipe de 13 estudantes.
+                    </p>
+                    <h4 class="project-card-collapsible-contribution">Minha Contribuição</h3>
+                    <ul class="project-card-collapsible-contribution-list">
+                        <li class="project-card-collapsible-contribution-list-item">Fui exclusivamente responsável pela implementação do OCR e pela integração do mesmo com ambos backend e frontend.</li>
+                    </ul>
+                </article>
+
+                
             </section>
 
 
@@ -242,18 +281,32 @@
     const project_cards = document.querySelectorAll('.project-card');
 
     project_cards.forEach(card => {
-        card.addEventListener('mouseenter', () => {
+        card.addEventListener('mouseenter', function () {
+            var content = this.nextElementSibling;
+
+            content.style.maxHeight = content.scrollHeight + "px";
+            card.classList.add('is-active');
             card.classList.remove('not-selected');
-            project_cards.forEach(otherCards => {
-                if (otherCards !== card) {
-                    otherCards.classList.add('not-selected');
+
+            project_cards.forEach(othercards => {
+                if (othercards !== card) {
+                    let otherContent = othercards.nextElementSibling;
+                    otherContent.style.maxHeight = null;
+
+                    othercards.classList.remove('is-active');
+                    othercards.classList.add('not-selected');
                 }
             });
         });
     });
 
     project_cards.forEach(card => {
-        card.addEventListener('mouseleave', () => {
+        card.addEventListener('mouseleave', function () {
+            var content = this.nextElementSibling;
+            
+            content.style.maxHeight = null;
+            card.classList.remove('is-active');
+
             const activeCard = Array.from(project_cards).find(c => c.classList.contains('is-active'))
 
             if (activeCard) {
@@ -268,11 +321,13 @@
                     c.classList.remove('not-selected');
                 });
             }
+
         });
     });
 
 
     // ----- PROJECT CARD COLLAPSIBLE SCRIPTS ----
+    /*
     project_cards.forEach(card => {
         card.addEventListener('click', function () {
             
@@ -298,6 +353,7 @@
             }
         });
     });
+    */
 
 
     // ----- TIMELINE SCRIPTS -----
