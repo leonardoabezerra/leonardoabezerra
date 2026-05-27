@@ -1,11 +1,11 @@
-# About Me
+# 🧑🏻‍💻 About Me
 ### Software Engineering Student | Backend Developer
 
 Software Engineering student at the **University of Brasília (UnB)** specializing in backend development. My engineering approach combines core software development principles with a **security-first mindset**, shaped by practical experience in cybersecurity infrastructure and network troubleshooting. I Focus on building reliable, secure systems and value organized, communicative collaboration within technical teams.
 
 ---
 
-## Tech Stack
+## 💻 Tech Stack
 
 - **Languages:** $~$ ![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black)
