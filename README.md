@@ -1,9 +1,7 @@
-# Leonardo Alves Bezerra
+# About Me
 ### Software Engineering Student | Backend Developer
 
-I am a 7th-semester Software Engineering student at the **University of Brasília (UnB)** specializing in backend development. My engineering approach combines core software development principles with a **security-first mindset**, shaped by practical experience in cybersecurity infrastructure and network troubleshooting. I focus on building reliable, secure systems and value organized, communicative collaboration within technical teams.
-
-<br>
+Software Engineering student at the **University of Brasília (UnB)** specializing in backend development. My engineering approach combines core software development principles with a **security-first mindset**, shaped by practical experience in cybersecurity infrastructure and network troubleshooting. I Focus on building reliable, secure systems and value organized, communicative collaboration within technical teams.
 
 ---
 
@@ -20,20 +18,26 @@ I am a 7th-semester Software Engineering student at the **University of Brasíli
 - **Frameworks & Libraries:** $~$ ![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=node.js&logoColor=white)
 ![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white)
 ![React Native](https://img.shields.io/badge/React_Native-20232A?style=flat-square&logo=react&logoColor=61DAFB)
+![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=flat-square&logo=streamlit&logoColor=white)
 ![Sequelize.js](https://img.shields.io/badge/Sequelize-52B0E7?style=flat-square&logo=sequelize&logoColor=white)
 ![Pytest](https://img.shields.io/badge/Pytest-0A9EDC?style=flat-square&logo=pytest&logoColor=white)
-![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=flat-square&logo=streamlit&logoColor=white)
+![Scrum](https://img.shields.io/badge/Scrum-0073B1?style=flat-square&logo=scrumalliance&logoColor=white)
+![Kanban](https://img.shields.io/badge/Kanban-0052CC?style=flat-square&logo=jira&logoColor=white)
 
 - **Databases:** $~$ ![SQL](https://img.shields.io/badge/SQL-4479A1?style=flat-square&logo=postgresql&logoColor=white)
 ![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=flat-square&logo=mysql&logoColor=white)
 ![SQLite](https://img.shields.io/badge/SQLite-003B57?style=flat-square&logo=sqlite&logoColor=white)
 ![MongoDB](https://img.shields.io/badge/MongoDB-4EA94B?style=flat-square&logo=mongodb&logoColor=white)
+![Google Sheets](https://img.shields.io/badge/Google_Sheets-34A853?style=flat-square&logo=google-sheets&logoColor=white)
 
 - **Tools & Infrastructure:** $~$ ![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white)
+![n8n](https://img.shields.io/badge/n8n-EA4B3D?style=flat-square&logo=n8n&logoColor=white)
+![Linux](https://img.shields.io/badge/Linux-FCC624?style=flat-square&logo=linux&logoColor=black)
+![Nginx](https://img.shields.io/badge/Nginx-009639?style=flat-square&logo=nginx&logoColor=white)
 ![Git/GitHub](https://img.shields.io/badge/Git%2FGitHub-F05032?style=flat-square&logo=git&logoColor=white)
 ![Google App Script](https://img.shields.io/badge/App_Script-4285F4?style=flat-square&logo=google-apps-script&logoColor=white)
-![n8n](https://img.shields.io/badge/n8n-EA4B3D?style=flat-square&logo=n8n&logoColor=white)
-![Varonis](https://img.shields.io/badge/Varonis-000000?style=flat-square)
+![Tailscale](https://img.shields.io/badge/Tailscale-9933FF?style=flat-square&logo=tailscale&logoColor=white)
+![OpenSSH](https://img.shields.io/badge/OpenSSH-000000?style=flat-square&logo=openssh&logoColor=white)
 
 ---
 
@@ -51,11 +55,28 @@ I am a 7th-semester Software Engineering student at the **University of Brasíli
   <a href="https://linkedin.com/in/yourprofile" target="_blank">
     <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn Badge">
   </a>
+  <a href="https://discord.com/users/270308113922392087" target="_blank">
+    <img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord Badge">
+  </a>
   <a href="mailto:your.email@example.com">
     <img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email Badge">
   </a>
 </p>
 
 ---
+
+```text
+    ___           _________     _________
+   /\  \         /\   ______\  /\   ____  \
+   \ \  \        \ \   ___\ /  \ \  \__/\  \
+    \ \  \______  \ \  \_/____  \ \  \___\  \    ___
+     \ \_________\ \ \_________\ \ \_________\  /\__\
+      \/_________/  \/_________/  \/_________/  \/__/
+
+
+    Developed by: Leonardo Alves Bezerra.
+```
+
+<br>
 
 > Leonardo Alves Bezerra | Backend Developer.
