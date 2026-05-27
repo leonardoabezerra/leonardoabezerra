@@ -37,6 +37,14 @@ I am a 7th-semester Software Engineering student at the **University of Brasíli
 
 ---
 
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/leonardoabezerra/leonardoabezerra/output/github-contribution-grid-snake-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/leonardoabezerra/leonardoabezerra/output/github-contribution-grid-snake.svg">
+  <img alt="GitHub Contribution Snake Animation" src="https://raw.githubusercontent.com/leonardoabezerra/leonardoabezerra/output/github-contribution-grid-snake.svg">
+</picture>
+
+---
+
 <h3 align="center">Contact Me</h3>
 
 <p align="center">
