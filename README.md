@@ -80,4 +80,4 @@ Software Engineering student at the **University of Brasília (UnB)** specializi
 
 <br>
 
-> Leonardo Alves Bezerra | Backend Developer.
+> Leonardo Alves Bezerra | Full-Stack Developer.
